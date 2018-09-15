@@ -15,11 +15,6 @@ fun main(args: Array<String>) = runBlocking<Unit> {
 
 }
 
-
-
-
-
-
 suspend fun function1(): Int {
     delay(1000)
     return 15

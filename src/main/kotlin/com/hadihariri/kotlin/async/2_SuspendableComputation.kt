@@ -4,8 +4,6 @@ import kotlinx.coroutines.experimental.*
 
 
 fun main(args: Array<String>) {
-
-
     println("Starting here")
     launch(CommonPool) {
         suspendableProcess()
@@ -15,6 +13,6 @@ fun main(args: Array<String>) {
 }
 
 suspend fun suspendableProcess() {
-    Thread.sleep(2000)
+    delay(2000)
     println("in process")
 }

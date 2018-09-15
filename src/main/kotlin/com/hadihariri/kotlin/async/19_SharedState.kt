@@ -11,9 +11,9 @@ var counter = 0
 fun main(args: Array<String>) = runBlocking<Unit> {
     // Switch to counterContext for faster execution
     massiveRun(CommonPool) {
-        run(counterContext) { // remove run when switching to counterContext
+        withContext(counterContext, CoroutineStart.DEFAULT, { // remove run when switching to counterContext
             counter++
-        }
+        })
     }
     println("Counter = $counter")
 }

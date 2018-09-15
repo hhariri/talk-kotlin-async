@@ -23,7 +23,7 @@ fun main(args: Array<String>) = runBlocking {
 
 
     jobs += launch(coroutineContext) {
-        println("CustomThread: ${threadName()}")
+        println("Corutine Context: ${threadName()}")
     }
 
 
